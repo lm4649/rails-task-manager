@@ -1,0 +1,17 @@
+<div class="container">
+  <h1 class="mb-1"><%= @task.title %></h1>
+  <div class="details">
+    <p><%= @task.details %></p>
+  </div>
+  <!-- check box here -->
+    <button class="btn btn-primary">
+      <%= link_to "Back to list", tasks_path %>
+    </button>
+    <button class="btn btn-primary">
+      <%= link_to "Edit Task", edit_task_path  %>
+    </button>
+    <button class="btn btn-primary">
+      <%= link_to "Delete Task", task_path(@task), method: :delete, data: {confirm: "Are you sure?"} %>
+    </button>
+</div>
+
